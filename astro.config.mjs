@@ -21,40 +21,41 @@ console.log(`Using Mermaid strategy: ${mermaidStrategy}`);
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com', // IMPORTANT: Replace with your actual domain in production
-  integrations: [
-    react(),
-    mdx({
-      remarkPlugins: [remarkReadingTime],
-      rehypePlugins: [
-        [
-          rehypeMermaid,
-          {
-            strategy:
-              process.env.NODE_ENV === 'production'
-                ? 'pre-mermaid'
-                : 'inline-svg',
-          },
-        ],
-      ],
-      syntaxHighlight: {
-        type: 'shiki',
-        excludeLangs: ['mermaid'],
-      },
-    }),
-  ],
+  site: 'https://example.com', // IMPORTANT: Replace with your actual domain in production
+  integrations: [
+    react(),
+    mdx({
+      remarkPlugins: [remarkReadingTime],
+      rehypePlugins: [
+        [
+          rehypeMermaid,
+          {
+            strategy:
+              process.env.NODE_ENV === 'production'
+                ? 'pre-mermaid'
+                : 'inline-svg',
+          },
+        ],
+      ],
+      syntaxHighlight: {
+        type: 'shiki',
+        excludeLangs: ['mermaid'],
+      },
+    }),
+  ],
 
-  i18n: {
-    locales: ['fr', 'en'],
-    defaultLocale: 'fr',
-    routing: {
-      prefixDefaultLocale: false,
-    },
-  },
+  // 🏆 CONFIGURACIÓN DE IDIOMA CORREGIDA
+  i18n: {
+    locales: ['en'], // ✅ SOLO IDIOMA FUNCIONAL
+    defaultLocale: 'en', // ✅ IDIOMA POR DEFECTO
+    routing: {
+      prefixDefaultLocale: true, // ✅ FUERZA EL PREFIJO /en/
+    },
+  },
 
-  vite: {
-    plugins: [tailwindcss()],
-  },
+  vite: {
+    plugins: [tailwindcss()],
+  },
 
-  adapter: vercel(),
+  adapter: vercel(),
 });

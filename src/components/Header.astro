@@ -1,47 +1,66 @@
 ---
 import { defaultLanguage, type LanguageCode } from '@/i18n/ui';
 import type { NavItem } from '@/layouts/BaseLayout.astro';
-import { type LanguageSelectorItem } from '@/lib/i18n-utils';
+// ❌ ELIMINAMOS ESTAS IMPORTACIONES, ya no se usan al quitar el selector de idioma:
+// import { type LanguageSelectorItem } from '@/lib/i18n-utils';
+// import { LanguageSelector } from './LanguageSelector.tsx';
 import { getRelativeLocaleUrl } from 'astro:i18n';
-import { LanguageSelector } from './LanguageSelector.tsx';
-import Logo from './Logo.astro';
 import ThemeToggle from './ThemeToggle.astro';
 
+// 🚀 IMPORTAMOS LO NECESARIO PARA LA IMAGEN
+import { Image } from 'astro:assets';
+import EdLogo from '@/assets/ed.png'; 
+
 interface Props {
-  languagesForSelector: Array<LanguageSelectorItem>;
-  navItems: Array<NavItem>;
+  // ❌ ELIMINAMOS ESTA PROPIEDAD:
+  // languagesForSelector: Array<LanguageSelectorItem>;
+  navItems: Array<NavItem>;
 }
-const { languagesForSelector, navItems } = Astro.props as Props;
+// Ajustamos la destructuración de props
+const { navItems } = Astro.props as Props;
 
 const currentLocale =
-  (Astro.currentLocale as LanguageCode | undefined) ?? defaultLanguage;
+  (Astro.currentLocale as LanguageCode | undefined) ?? defaultLanguage;
 ---
 
 <header
-  class="py-6 border-b sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+  class="py-6 border-b sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
 >
-  <nav class="mx-auto px-4 max-w-screen-2xl flex justify-between items-center">
-    <Logo />
-    <div class="flex items-center gap-x-5">
-      {
-        navItems.map((link) => (
-          <a
-            href={getRelativeLocaleUrl(currentLocale, link.href)}
-            class="font-medium text-muted-foreground transition-colors hover:text-foreground relative group"
-          >
-            {link.label}
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-          </a>
-        ))
-      }
-    </div>
-    <div class="flex items-center gap-x-3">
-      <LanguageSelector
-        currentLocale={currentLocale}
-        languages={languagesForSelector}
-        client:load
-      />
-      <ThemeToggle />
-    </div>
-  </nav>
+  <nav class="mx-auto px-4 max-w-screen-2xl flex justify-between items-center">
+    {/* ✅ CORRECCIÓN CLAVE: El logo ahora usa getRelativeLocaleUrl para apuntar siempre
+         a la raíz (/) con el prefijo de idioma 'en'. */}
+    <a 
+      href={getRelativeLocaleUrl(currentLocale, '/')} 
+      class="flex items-center space-x-2 text-2xl font-bold"
+    >
+        <Image 
+            src={EdLogo} 
+            alt="Logo de Engels Damirón" 
+            width={40}  
+            height={40} 
+        />
+    </a>
+    <div class="flex items-center gap-x-5">
+      {
+        navItems.map((link) => (
+          <a
+            href={getRelativeLocaleUrl(currentLocale, link.href)}
+            class="font-medium text-muted-foreground transition-colors hover:text-foreground relative group"
+          >
+            {link.label}
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+          </a>
+        ))
+      }
+    </div>
+    <div class="flex items-center gap-x-3">
+      {/* ❌ ELIMINAMOS EL SELECTOR DE IDIOMA */}
+      {/* <LanguageSelector
+        currentLocale={currentLocale}
+        languages={languagesForSelector}
+        client:load
+      /> */}
+      <ThemeToggle />
+    </div>
+  </nav>
 </header>
