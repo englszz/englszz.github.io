@@ -7,7 +7,7 @@ import placeholderImage from '@/assets/edp.jpg';
 // ====================================================================
 
 // Imágenes principales
-import scapeRoomImage from '@/assets/Scape Room.png'; 
+import scapeRoomImage from '@/assets/Logo !.jpg'; 
 import nutriMarketImage from '@/assets/Nutri.png'; 
 
 // NUEVAS IMÁGENES EXTRA PARA NUTRI MARKET (bajos.png, mart.png, nutrimart.png)
@@ -18,7 +18,7 @@ import nutriExtra3 from '@/assets/nutrimart.png';
 // NUEVAS IMÁGENES EXTRA PARA SCAPE ROOM (room.png, scapee.png, pixel room.png)
 import scapeExtra1 from '@/assets/room.png';
 import scapeExtra2 from '@/assets/scapee.png';
-import scapeExtra3 from '@/assets/pixel room.png'; 
+import scapeExtra3 from '@/assets/Scape Room.png'; 
 
 // NUEVAS IMÁGENES EXTRA PARA EDP RESTAURANT (menu pag.png, pagina web.png, placeholder.webp)
 import edpExtra1 from '@/assets/menu pag.png'; 
@@ -270,7 +270,7 @@ export function getTranslatedProjectBySlug(
   return translateProject(project, currentLang);
 }
 
-// Skills (El código de skills no necesita cambios)
+// Skills (El código de skills NO NECESITA CAMBIOS, solo añadir las nuevas habilidades)
 export const skillsList: Array<SkillData> = [
   {
     id: 'frontendDevelopment',
@@ -306,9 +306,28 @@ export const skillsList: Array<SkillData> = [
       { id: 'docker', name: 'Docker' },
     ],
   },
+    // ⭐ NUEVA HABILIDAD 5: SOFTWARE
+    {
+        id: 'softwareSkills', 
+        iconName: 'PenTool', // ⬅️ REUTILIZAMOS UN NOMBRE EXISTENTE para evitar el error
+        technologies: [
+            { id: 'excel', name: 'Excel' },
+            { id: 'powerpoint', name: 'PowerPoint' },
+            { id: 'word', name: 'Word' },
+        ],
+    },
+    // ⭐ NUEVA HABILIDAD 6: CERTIFICACIONES
+    {
+        id: 'Habilidades técnicas', 
+        iconName: 'MonitorSmartphone', // ⬅️ REUTILIZAMOS OTRO NOMBRE EXISTENTE para evitar el error
+        technologies: [
+            { id: 'cert1', name: 'Certificación 1' },
+            { id: 'cert2', name: 'Certificación 2' },
+        ],
+    },
 ];
 
-// Function to get skills with translated content
+// Function to get skills with translated content (Esta función permanece IGUAL)
 export function getTranslatedSkills(
   lang: LanguageCode | undefined
 ): Array<TranslatedSkill> {
@@ -333,7 +352,7 @@ export function getTranslatedSkills(
       return {
         ...skill,
         title: skill.id, // Fallback title
-        description: 'Description missing for this skill.', // Fallback description
+        description: 'Soporte técnico a equipos y redes, Mantenimiento básico de sistemas, Organización y gestión de recursos tecnológicos, Instalación y configuración de software.', // Fallback description
       };
     }
 

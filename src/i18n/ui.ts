@@ -1,14 +1,12 @@
 export const languages: Record<'en', { name: string; flag: string }> = {
-  en: { name: 'Español', flag: 'do' }, // ⬅️ 1. 'fr' ELIMINADO. 2. Bandera de 'us' cambiada a 'do' (República Dominicana).
+  en: { name: 'Español', flag: 'do' }, // Bandera de República Dominicana
 } as const;
 
-export const defaultLanguage = 'en'; // ⬅️ 3. El idioma por defecto ahora es 'en' (donde tienes el español).
+export const defaultLanguage = 'en'; // El idioma por defecto es español (clave 'en')
 
 export type LanguageCode = keyof typeof languages;
 
 export const ui = {
-  // ❌ CLAVE 'fr' ELIMINADA POR COMPLETO
-
   en: {
     projectsContent: {
       sampleProject: {
@@ -59,6 +57,16 @@ export const ui = {
         title: 'MUN´s',
         description: 'Delegado y miembro de la mesa directiva en Modelo de las Naciones Unidas (2023-2026). ',
       },
+      // 🎯 ¡CLAVES NUEVAS AGREGADAS AQUÍ!
+      softwareSkills: { 
+        title: 'Educación',
+        description: 'Bachiller Técnico en Desarrollo y Administración de Aplicaciones Informáticas Politécnico Parroquial Betania (2022 – 2025).',
+      },
+      cloudServices: { 
+        title: 'Certificaciones',
+        description: 'Certificaciones en plataformas de nube y conocimientos avanzados en bases de datos.',
+      },
+      // ------------------------------------
     },
     site: {
       title: 'My Awesome Template',
@@ -81,7 +89,7 @@ export const ui = {
       heroGreeting: "Engels Damirón",
       heroSubtitlePart1: 'Técnico en soporte de redes y sistemas informáticos',
       heroSubtitlePart2: 'Administrdor de Aplicaciones Informáticas',
-      heroIntroduction: 'Add an introduction here.',
+      heroIntroduction: 'Aquí podrás ver mis proyectos, mis logros académicos y el camino que estoy construyendo en el mundo tecnológico.',
       heroViewWorkButton: 'Ver mis trabajos',
       heroContactButton: 'Contáctame',
       heroImageAlt:
@@ -94,7 +102,7 @@ export const ui = {
       imageNotAvailable: 'Image not available for now',
       mySkillsTitle: 'Mis Habilidades',
       mySkillsDescription:
-        'Aquí muestro mis principales habilidades y herramientas que manejo.',
+        'Aquí muestro mis principales habilidades y herramientas que manejo.', // ⬅️ Puedes cambiar esto si quieres otra descripción!
     },
     blogPage: {
       pageTitle: 'Mis Logros!',

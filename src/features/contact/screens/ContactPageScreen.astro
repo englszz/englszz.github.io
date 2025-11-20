@@ -1,82 +1,82 @@
 ---
 import Heading from '@/components/Heading.astro';
-import { buttonVariants } from '@/components/ui/button';
-import type { LanguageCode } from '@/i18n/ui';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Mail, Linkedin, Github } from 'lucide-react'; // Importamos los íconos
 import { cn } from '@/lib/utils';
-import { Calendar } from 'lucide-react';
 
-import { ContactForm } from '../components/ContactForm.tsx';
-import type { ContactFormTranslations } from '../type';
+// --- TUS DATOS DE CONTACTO ---
+const CONTACT_EMAIL = 'engelsdamiron9@gmail.com'; 
+const LINKEDIN_URL = 'https://www.linkedin.com/in/engelsdamiron';
+const GITHUB_URL = 'https://github.com/englszz';
 
 interface Props {
-  lang: LanguageCode;
-  mainHeadingTitle: string;
-  mainHeadingDescription: string;
-  formTitle: string;
-  formTranslations: ContactFormTranslations;
-  orSeparatorText: string;
-  calendarTitle: string;
-  calendarDescription: string;
-  calendarLinkLabel: string;
-  calendarUrl: string;
+  mainHeadingTitle: string; 
+  mainHeadingDescription: string; 
 }
 
 const {
-  lang,
-  mainHeadingTitle,
-  mainHeadingDescription,
-  formTitle,
-  formTranslations,
-  orSeparatorText,
-  calendarTitle,
-  calendarDescription,
-  calendarLinkLabel,
-  calendarUrl,
+  mainHeadingTitle,
+  mainHeadingDescription,
 } = Astro.props;
 ---
 
-<section class="py-12 md:py-16">
-  <Heading
-    title={mainHeadingTitle}
-    description={mainHeadingDescription}
-    showDivider={true}
-    className="flex flex-col items-center justify-center"
-    titleClassName="md:text-5xl"
-  />
+<section id="contact" class="py-12 md:py-16">
+  <Heading
+    title={mainHeadingTitle}
+    description={mainHeadingDescription}
+    showDivider={true}
+    className="flex flex-col items-center justify-center"
+    titleClassName="md:text-5xl"
+  />
 
-  <div class="flex justify-center mt-12">
-    <div class="w-full max-w-xl space-y-6 bg-card p-6 md:p-8 rounded-lg shadow">
-      {/* Section Formulaire */}
-      <Heading title={formTitle} className="text-center" />
-      <ContactForm client:load {lang} {formTranslations} />
+  <div class="flex justify-center mt-12">
+    <div class="w-full max-w-lg">
+      {/* 🎯 TARJETA DE CONTACTO SIMPLE */}
+      <Card class="p-6 md:p-8 space-y-6">
+        <CardHeader class="p-0">
+          <CardTitle class="text-center text-3xl font-bold">
+            Contáctame Directamente
+          </CardTitle>
+        </CardHeader>
+        <CardContent class="p-0 space-y-4">
+          {/* Enlace de Email */}
+          <div class="flex items-center space-x-3">
+            <Mail class="size-6 text-primary flex-shrink-0" />
+            <a 
+              href={`mailto:${CONTACT_EMAIL}`} 
+              class="text-base font-medium text-foreground hover:text-primary transition-colors truncate"
+            >
+              {CONTACT_EMAIL}
+            </a>
+          </div>
+          
+          {/* Enlace de LinkedIn */}
+          <div class="flex items-center space-x-3">
+            <Linkedin class="size-6 text-primary flex-shrink-0" />
+            <a 
+              href={LINKEDIN_URL} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="text-base font-medium text-foreground hover:text-primary transition-colors truncate"
+            >
+              LinkedIn: engelsdamiron
+            </a>
+          </div>
 
-      {/* Séparateur OU */}
-      <div class="my-8 flex items-center">
-        <hr class="flex-grow border-border" />
-        <span class="mx-4 text-muted-foreground font-medium"
-          >{orSeparatorText}</span
-        >
-        <hr class="flex-grow border-border" />
-      </div>
-
-      {/* Section Google Calendar */}
-      <Heading
-        title={calendarTitle}
-        className="text-center"
-        description={calendarDescription}
-      />
-      <a
-        href={calendarUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        class={cn(
-          'w-full mt-4',
-          buttonVariants({ variant: 'default', size: 'lg' })
-        )}
-      >
-        <Calendar className="mr-2 size-4" />
-        {calendarLinkLabel}
-      </a>
-    </div>
-  </div>
+          {/* Enlace de GitHub */}
+          <div class="flex items-center space-x-3">
+            <Github class="size-6 text-primary flex-shrink-0" />
+            <a 
+              href={GITHUB_URL} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="text-base font-medium text-foreground hover:text-primary transition-colors truncate"
+            >
+              GitHub: englszz
+            </a>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
 </section>
