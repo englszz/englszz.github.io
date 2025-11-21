@@ -9,7 +9,7 @@ import { formatDate } from '@/lib/utils';
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import { getRelativeLocaleUrl } from 'astro:i18n';
-import { ArrowLeft, Clock, Pencil } from 'lucide-react';
+import { ArrowLeft, Clock, Mail } from 'lucide-react';
 import BlogPostCard from '../components/BlogPostCard.astro';
 
 type Props = {
@@ -101,13 +101,13 @@ const pageDescription = post.description;
 
       <div class="flex justify-end">
         <a
-          href={editUrl}
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=engelsdamiron9@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
-          class={buttonVariants({ variant: 'ghost' }) + ' hover:underline'}
+          class={buttonVariants({ variant: 'ghost' }) + ' hover:underline flex items-center gap-2'}
         >
-          <Pencil className=" size-4" />
-          {t('editOnGithub') || 'Proposer une modification sur GitHub'}
+          <Mail className="size-4" />
+          Contáctame por correo
         </a>
       </div>
     </div>

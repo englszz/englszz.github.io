@@ -57,19 +57,19 @@ export const ui = {
         title: 'MUN´s',
         description: 'Delegado y miembro de la mesa directiva en Modelo de las Naciones Unidas (2023-2026). ',
       },
-      // 🎯 ¡CLAVES NUEVAS AGREGADAS AQUÍ!
-      softwareSkills: { 
+      // 🎯 ¡CLAVES NUEVAS AGREGADAS AQUÍ!
+      softwareSkills: { 
         title: 'Educación',
         description: 'Bachiller Técnico en Desarrollo y Administración de Aplicaciones Informáticas Politécnico Parroquial Betania (2022 – 2025).',
       },
-      cloudServices: { 
+      cloudServices: { 
         title: 'Certificaciones',
         description: 'Certificaciones en plataformas de nube y conocimientos avanzados en bases de datos.',
       },
-      // ------------------------------------
+      // ------------------------------------
     },
     site: {
-      title: 'My Awesome Template',
+      title: 'ED, Engels Damirón, Todos los derechos', // <-- Nombre de Copyright
       description:
         'A modern and performant Astro template to kickstart your project.',
     },
@@ -80,7 +80,7 @@ export const ui = {
       projects: 'Proyectos',
     },
     footer: {
-      rights: 'All rights reserved.',
+      rights: '', // <-- ¡CAMBIO APLICADO AQUÍ!
     },
     homePage: {
       pageTitle: 'Home | Engels Smith - FullStack Developer',
