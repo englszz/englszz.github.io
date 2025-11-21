@@ -62,7 +62,8 @@ const ui = {
       // ------------------------------------
     },
     site: {
-      title: "My Awesome Template",
+      title: "ED, Engels Damirón, Todos los derechos",
+      // <-- Nombre de Copyright
       description: "A modern and performant Astro template to kickstart your project."
     },
     nav: {
@@ -72,7 +73,8 @@ const ui = {
       projects: "Proyectos"
     },
     footer: {
-      rights: "All rights reserved."
+      rights: ""
+      // <-- ¡CAMBIO APLICADO AQUÍ!
     },
     homePage: {
       pageTitle: "Home | Engels Smith - FullStack Developer",

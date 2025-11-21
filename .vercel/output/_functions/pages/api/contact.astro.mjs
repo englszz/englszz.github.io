@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { a as ui } from '../../chunks/ui_BJGTvBzJ.mjs';
+import { a as ui } from '../../chunks/ui_BNBtX8R5.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const stringFieldSchema = (minLength = 2, maxLength = 50) => z.string().nonempty().min(minLength).max(maxLength);
