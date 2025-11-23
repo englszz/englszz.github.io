@@ -6,10 +6,11 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+// 🔑 VERSIÓN FINAL CORREGIDA PARA FORMATO DE FECHA
 export function formatDate(dateString: Date, lang: LanguageCode) {
   let locale = 'en-US'; // Valor por defecto
 
-  // 🔑 AÑADIMOS LA LÓGICA PARA EL ESPAÑOL Y EL FRANCÉS
+  // LÓGICA CORREGIDA: Asigna 'es-ES' si el idioma detectado es 'es'
   if (lang === 'es') {
     locale = 'es-ES';
   } else if (lang === 'fr') {

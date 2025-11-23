@@ -45,10 +45,11 @@ export default defineConfig({
 
   // 🏆 CONFIGURACIÓN DE IDIOMA CORREGIDA
   i18n: {
-    locales: ['en'], // ✅ SOLO IDIOMA FUNCIONAL
-    defaultLocale: 'en', // ✅ IDIOMA POR DEFECTO
+    // 🔑 CORRECCIÓN: AÑADIDO 'es' y 'fr'
+    locales: ['en', 'es', 'fr'], 
+    defaultLocale: 'en',
     routing: {
-      prefixDefaultLocale: true, // ✅ FUERZA EL PREFIJO /en/
+      prefixDefaultLocale: true, 
     },
   },
 
