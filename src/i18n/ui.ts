@@ -6,6 +6,9 @@ export const defaultLanguage = 'en'; // El idioma por defecto es español (clave
 
 export type LanguageCode = keyof typeof languages;
 
+// force rebuild 23 feb 2025
+
+
 export const ui = {
   en: {
     projectsContent: {

@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config';
 
 import react from '@astrojs/react';
-
 import mdx from '@astrojs/mdx';
 
 import tailwindcss from '@tailwindcss/vite';
@@ -21,41 +20,38 @@ console.log(`Using Mermaid strategy: ${mermaidStrategy}`);
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com', // IMPORTANT: Replace with your actual domain in production
-  integrations: [
-    react(),
-    mdx({
-      rehypePlugins: [
-        [
-          rehypeMermaid,
-          {
-            strategy:
-              process.env.NODE_ENV === 'production'
-                ? 'pre-mermaid'
-                : 'inline-svg',
-          },
-        ],
-      ],
-      syntaxHighlight: {
-        type: 'shiki',
-        excludeLangs: ['mermaid'],
-      },
-    }),
-  ],
+  site: 'https://example.com', // Puedes cambiarlo luego si quieres poner tu dominio real
+  integrations: [
+    react(),
+    mdx({
+      rehypePlugins: [
+        [
+          rehypeMermaid,
+          {
+            strategy: isProduction ? 'pre-mermaid' : 'inline-svg',
+          },
+        ],
+      ],
+      syntaxHighlight: {
+        type: 'shiki',
+        excludeLangs: ['mermaid'],
+      },
+    }),
+  ],
 
-  // 🏆 CONFIGURACIÓN DE IDIOMA CORREGIDA
-  i18n: {
-    // 🔑 CORRECCIÓN: AÑADIDO 'es' y 'fr'
-    locales: ['en', 'es', 'fr'], 
-    defaultLocale: 'en',
-    routing: {
-      prefixDefaultLocale: true, 
-    },
-  },
+  // 🏆 CONFIG DE IDIOMA ARREGLADA
+  // 🔥 SOLO USAMOS 'en' PORQUE TU PORTAFOLIO ENTERO USA ESA CLAVE COMO ESPAÑOL
+  i18n: {
+    locales: ['en'], 
+    defaultLocale: 'en',
+    routing: {
+      prefixDefaultLocale: true,
+    },
+  },
 
-  vite: {
-    plugins: [tailwindcss()],
-  },
+  vite: {
+    plugins: [tailwindcss()],
+  },
 
-  adapter: vercel(),
+  adapter: vercel(),
 });
