@@ -69,7 +69,7 @@ export const ui = {
       // ------------------------------------
     },
     site: {
-      title: 'My Awesome Template',
+      title: 'ED, Engels Damirón',
       description:
         'A modern and performant Astro template to kickstart your project.',
     },
@@ -80,7 +80,7 @@ export const ui = {
       projects: 'Proyectos',
     },
     footer: {
-      rights: 'All rights reserved.',
+      rights: 'Todos los derechos.',
     },
     homePage: {
       pageTitle: 'Home | Engels Smith - FullStack Developer',
@@ -113,22 +113,22 @@ export const ui = {
         'Medallas, reconocimientos, participaciones, experiencias, MUN´s (Modelos Naciones Unidas), etc.',
       comingSoon: 'Blog posts will appear here soon. Check back later!',
       heroImageAlt: 'Hero image for article: ',
-      publishedOn: 'Published on: ',
+      publishedOn: 'Fecha: ',
       readMore: 'Leer más',
-      readingTimeSuffix: 'min read',
+      readingTimeSuffix: 'Leído hace',
       searchPlaceholder: 'Buscar artículos...',
-      filterByTagButtonLabel: 'Filter by tag',
+      filterByTagButtonLabel: 'Filtrar por categoría',
       noTagFound: 'No tag found.',
       selectTagCommandPlaceholder: 'Search tag...',
       allTagsLabel: 'All tags',
       noPostsFound: 'No posts found.',
     },
     blogPost: {
-      publishedOn: 'Published on: ',
+      publishedOn: 'Fecha: ',
       updatedOn: 'Updated on: ',
       heroImageAlt: 'Hero image for article: ',
       backToList: 'Volver a logros',
-      readingTimeSuffix: 'min read',
+      readingTimeSuffix: 'Leído hace 22 min',
       relatedPostsTitle: 'Continue Reading',
       readMore: 'Leer más',
     },
@@ -166,8 +166,8 @@ export const ui = {
     },
     projectDetailPage: {
       backToProjects: 'Volver a proyectos',
-      categoryLabel: 'Category:',
-      dateLabel: 'Date:',
+      categoryLabel: 'Categoría:',
+      dateLabel: 'Fecha de publicación:',
       aboutTitle: 'Sobre este proyecto',
       keyFeaturesTitle: 'Aspectos Clave', // <-- CAMBIO APLICADO
       galleryTitle: 'Gallery',
