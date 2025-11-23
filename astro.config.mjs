@@ -25,7 +25,6 @@ export default defineConfig({
   integrations: [
     react(),
     mdx({
-      remarkPlugins: [remarkReadingTime],
       rehypePlugins: [
         [
           rehypeMermaid,
