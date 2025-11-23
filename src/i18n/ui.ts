@@ -6,9 +6,6 @@ export const defaultLanguage = 'en'; // El idioma por defecto es español (clave
 
 export type LanguageCode = keyof typeof languages;
 
-// force rebuild 23 feb 2025
-
-
 export const ui = {
   en: {
     projectsContent: {
@@ -97,7 +94,7 @@ export const ui = {
       heroContactButton: 'Contáctame',
       heroImageAlt:
         'Illustration representing Engels Smith or a development concept',
-      featuredProjectsTitle: 'AAAAAAAAAAA:',
+      featuredProjectsTitle: 'Últimos proyectos:',
       featuredProjectsDescription:
         "Acá salen mis últimos proyectos como desarrollador web y diseñador gráfico!",
       projectCardViewProject: 'Ver proyecto',
@@ -239,3 +236,5 @@ export function useTranslations<F extends FeatureType>(
     ] as string;
   };
 }
+
+
