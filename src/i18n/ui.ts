@@ -97,7 +97,7 @@ export const ui = {
       heroContactButton: 'Contáctame',
       heroImageAlt:
         'Illustration representing Engels Smith or a development concept',
-      featuredProjectsTitle: 'Últimos proyectos:',
+      featuredProjectsTitle: 'AAAAAAAAAAA:',
       featuredProjectsDescription:
         "Acá salen mis últimos proyectos como desarrollador web y diseñador gráfico!",
       projectCardViewProject: 'Ver proyecto',
