@@ -38,6 +38,7 @@ export default defineConfig({
       },
     }),
   ],
+// force rebuild 24 feb 2025
 
   // 🏆 CONFIG DE IDIOMA ARREGLADA
   // 🔥 SOLO USAMOS 'en' PORQUE TU PORTAFOLIO ENTERO USA ESA CLAVE COMO ESPAÑOL
