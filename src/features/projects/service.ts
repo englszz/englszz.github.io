@@ -44,7 +44,7 @@ import newProj6Image from '@/assets/Dailycomicslogofull.jpg';
 
 // ⭐ IMÁGENES EXTRA DE LEGMA AÑADIDAS
 import legmaExtra1 from '@/assets/Legma.png';
-import legmaExtra2 from '@/assets/Logo2.png';
+import legmaExtra2 from '@/assets/logo2.png';
 import legmaExtra3 from '@/assets/legg.png'; 
 
 // 🟢 NUEVAS IMÁGENES EXTRA PARA DAILY COMICS (dailyrojo.png, Daily.png, Comics.png)
