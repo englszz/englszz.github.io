@@ -82,6 +82,7 @@ const ui = {
       heroGreeting: "Engels Damirón",
       heroSubtitlePart1: "Técnico en soporte de redes y sistemas informáticos",
       heroSubtitlePart2: "Administrdor de Aplicaciones Informáticas",
+      heroSubtitlePart3: "Estudiante de Ingeniería en Ciberseguridad",
       heroIntroduction: "Aquí podrás ver mis proyectos, mis logros académicos y el camino que estoy construyendo en el mundo tecnológico.",
       heroViewWorkButton: "Ver mis trabajos",
       heroContactButton: "Contáctame",

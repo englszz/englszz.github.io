@@ -80,16 +80,17 @@ export const ui = {
       projects: 'Proyectos',
     },
     footer: {
-      rights: '', // <-- ¡CAMBIO APLICADO AQUÍ!
+      rights: '', // <-- ¡CAMBIO APLICADO AQUÍ! 
     },
     homePage: {
       pageTitle: 'Home | Engels Smith - FullStack Developer',
       pageDescription:
         'Welcome to the portfolio of Engels Smith, a FullStack developer passionate about creating innovative web experiences.',
       heroGreeting: "Engels Damirón",
-      heroSubtitlePart1: 'Técnico en soporte de redes y sistemas informáticos',
-      heroSubtitlePart2: 'Administrdor de Aplicaciones Informáticas',
-      heroIntroduction: 'Aquí podrás ver mis proyectos, mis logros académicos y el camino que estoy construyendo en el mundo tecnológico.',
+      heroSubtitlePart1: 'Técnico en Soporte IT + Redes',
+      heroSubtitlePart2: 'Administrador de Aplicaciones Informáticas',
+      heroSubtitlePart3: 'Estudiante de Ingeniería en Ciberseguridad',
+      heroIntroduction: 'Aquí podrás conocer mis proyectos, mis avances académicos y cómo estoy creciendo dentro del área de ciberseguridad y la tecnología.',
       heroViewWorkButton: 'Ver mis trabajos',
       heroContactButton: 'Contáctame',
       heroImageAlt:
