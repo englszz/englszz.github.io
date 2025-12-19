@@ -12,13 +12,15 @@ const blogCollection = defineCollection({
       description: z.string().optional(),
       pubDate: z.coerce.date(),
       updatedDate: z.coerce.date().optional(),
-      heroImage: z.object({
-        url: image(),
-        alt: z.string(),
-      }),
+      heroImage: z
+        .object({
+          url: image(),
+          alt: z.string(),
+        })
+        .optional(),
       tags: z.array(z.string()).optional(),
       relatedPosts: z.array(reference('blog')),
-      readingTimeMinutes: z.number().optional(), // Added by remark plugin
+      readingTimeMinutes: z.number().optional(),
       isDraft: z.boolean(),
       lang: z.enum(['fr', 'en']).optional().default('fr'),
     }),
