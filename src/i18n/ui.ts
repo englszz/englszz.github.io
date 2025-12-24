@@ -83,7 +83,7 @@ export const ui = {
       rights: '', // <-- ¡CAMBIO APLICADO AQUÍ! 
     },
     homePage: {
-      pageTitle: 'Home | Engels Smith - FullStack Developer',
+      pageTitle: 'Inicio | Engels Smith',
       pageDescription:
         'Welcome to the portfolio of Engels Smith, a FullStack developer passionate about creating innovative web experiences.',
       heroGreeting: "Engels Damirón",
@@ -106,7 +106,7 @@ export const ui = {
         'Aquí muestro mis principales habilidades y herramientas que manejo.', // ⬅️ Puedes cambiar esto si quieres otra descripción!
     },
     blogPage: {
-      pageTitle: 'Mis Logros!',
+      pageTitle: 'Logros | Engels Smith',
       pageDescription:
         'Articles and thoughts on web development, software architecture, and new technologies.',
       title: 'Mis Logros!',
@@ -137,7 +137,7 @@ export const ui = {
       title: 'Table of Contents',
     },
     contactPage: {
-      pageTitle: 'Contáctame',
+      pageTitle: 'Contacto | Engels Smith',
       pageDescription:
         "Interesad@ en mis proyectos? Contáctame para más información!",
 
@@ -179,7 +179,7 @@ export const ui = {
     },
     projectsPage: {
       title: 'Mis Proyectos',
-      metaTitle: "Mis Proyectos| Engels Smith's Portfolio",
+      metaTitle: "Mis Proyectos | Engels Smith",
       metaDescription: "Discover all of Engels Smith's projects.",
       noProjects: 'No projects to display at the moment.',
       noProjectsDescription:
