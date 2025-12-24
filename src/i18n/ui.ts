@@ -85,7 +85,7 @@ export const ui = {
     homePage: {
       pageTitle: 'Inicio | Engels Smith',
       pageDescription:
-        'Welcome to the portfolio of Engels Smith, a FullStack developer passionate about creating innovative web experiences.',
+        'Bienvenido al portafolio de Engels Smith Damirón, un espacio donde comparto mis logros y proyectos durante mi carrerra.',
       heroGreeting: "Engels Damirón",
       heroSubtitlePart1: 'Técnico en Soporte IT + Redes',
       heroSubtitlePart2: 'Administrador de Aplicaciones Informáticas',
