@@ -15,6 +15,8 @@ import legmaGrandeImage from '@/assets/Legmagrande.jpg';
 import reviewsMainImage from '@/assets/REVIEW.png';
 //
 import EDEPEMainImage from '@/assets/EDEPE.jpeg';
+//
+import EDPweb from '@/assets/edpp.jpg';
 
 
 // NUEVAS IMÁGENES EXTRA PARA NUTRI MARKET (bajos.png, mart.png, nutrimart.png)
@@ -48,9 +50,9 @@ import legmaExtra2 from '@/assets/logo2.png';
 import legmaExtra3 from '@/assets/legg.png'; 
 
 // 🟢 NUEVAS IMÁGENES EXTRA PARA DAILY COMICS (dailyrojo.png, Daily.png, Comics.png)
-import dailyRojo from '@/assets/dailyrojo.png';
-import dailyPng from '@/assets/preciosbajos.png';
-import comicsPng from '@/assets/Daily.png';
+import dailyRojo from '@/assets/Daily.png';
+import dailyPng from '@/assets/Dailycomicslogo.png';
+import comicsPng from '@/assets/nosotrosdaily.png';
 
 // 🟢 NUEVAS IMÁGENES EXTRA PARA LIBRY BOOKS
 import pruebaleer from '@/assets/pruebaleer.png';
@@ -61,6 +63,10 @@ import libry from '@/assets/libry.png';
 import edepeblanco from '@/assets/edepewhite.png'
 import edepelogo from '@/assets/EDEPElogo.jpeg'
 import eddpe from '@/assets/eddpe.jpeg'
+//
+import edpweb from '@/assets/edpnegro.png'
+import edpagency from '@/assets/edpagency.png'
+import edplol from '@/assets/edpblacki.png'
 
 
 import type {
@@ -69,6 +75,7 @@ import type {
   TranslatedProject,
   TranslatedSkill,
 } from './type';
+import { Target } from 'lucide-react';
 
 const projectsListUnsorted: Array<ProjectData> = [
   // PROYECTO 1: EDP Restaurant (Existente)
@@ -76,6 +83,7 @@ const projectsListUnsorted: Array<ProjectData> = [
     id: 'sampleProject', // EDP Restaurant
     slug: 'edp-restaurant', 
     imageUrl: placeholderImage, 
+    projectUrl: 'https://restaurant-phi-sandy.vercel.app/',
     tags: ['Restaurante', 'Menú', 'EDP'], 
     Categoría: 'Web Application', 
     date: '2025-01-01', 
@@ -99,6 +107,7 @@ const projectsListUnsorted: Array<ProjectData> = [
     id: 'Scape Room', 
     slug: 'scape-room', 
     imageUrl: scapeRoomImage, 
+    projectUrl: 'https://www.instagram.com/scapee.room/',
     tags: ['Tecnología', 'Feria', 'Diseño'],
     Categoría: 'Fería Tecnológica',
     date: '2025-11-17', 
@@ -120,6 +129,7 @@ const projectsListUnsorted: Array<ProjectData> = [
     id: 'ЯEVIEW', 
     slug: 'reviews-project', 
     imageUrl: reviewsMainImage, 
+    projectUrl: 'https://music-reviews-three.vercel.app/',
     tags: ['Reviews', 'Música', 'Opinión'],
     Categoría: 'Plataforma de Reviews',
     date: '2025-11-16', 
@@ -206,6 +216,7 @@ const projectsListUnsorted: Array<ProjectData> = [
     id: 'Daily Comics', 
     slug: 'emprendimiento', 
     imageUrl: newProj6Image, 
+    projectUrl: 'https://dailycomics-theta.vercel.app/',
     tags: ['Cómics', 'Daily', 'Web'], 
     Categoría: 'Página Web de Cómics', 
     date: '2024-01-10', 
@@ -218,9 +229,9 @@ const projectsListUnsorted: Array<ProjectData> = [
       { id: 'astro', name: 'Astro' },
       { id: 'tailwindcss', name: 'TailwindCSS' },
     ],
-    edpExtra1: dailyRojo,
-    edpExtra2: dailyPng,
-    edpExtra3: comicsPng,
+    extraImage1: dailyRojo,
+    extraImage2: dailyPng,
+    extraImage3: comicsPng,
   },
 
 {
@@ -243,6 +254,29 @@ const projectsListUnsorted: Array<ProjectData> = [
     extraImage2: edepelogo,
     extraImage3: eddpe,
   },
+
+
+{
+  id: 'EDP.web',
+  slug: 'edp-web',
+  imageUrl: EDPweb,
+  projectUrl: 'https://edpweb.vercel.app/',
+  tags: ['Web', 'Agencia', 'EDP.web'],
+  Categoría: 'Agencia de Páginas Web',
+  date: '2024-01-10',
+  galleryImages: [],
+  keyFeatures: [
+    { id: 'Aspectos de Marca' },
+    { id: 'Contacto' },
+  ],
+  technologiesUsed: [
+    { id: 'astro', name: 'Astro' },
+    { id: 'tailwindcss', name: 'TailwindCSS' },
+  ],
+  extraImage1: edpweb,
+  extraImage2: edpagency,
+  extraImage3: edplol,
+},
 
 ];
 
@@ -323,6 +357,11 @@ function translateProject(
         challenges = 'Uno de los principales retos fue entender realmente qué productos tenían más potencial de venta y cuáles no, lo que implicó analizar tendencias y preferencias del público. También representó un desafío manejar inventario con responsabilidad, organizar pedidos y coordinar todo sin contar con muchos recursos. Además, fue necesario aprender a promocionar el proyecto de manera efectiva para lograr visibilidad.';
         learnings = 'La experiencia permitió desarrollar habilidades reales de emprendimiento, desde la planificación hasta la ejecución. Aprendí sobre gestión básica de negocio, atención al cliente y toma de decisiones basada en resultados reales. También fortalecí mi capacidad de organización, disciplina y pensamiento estratégico, entendiendo mejor cómo funcionan las ventas y el comportamiento del consumidor.';
         break;
+         case 'EDP.web':
+        detailedDescription = 'EDP.web es el sitio web de una agencia de desarrollo web que busca transmitir profesionalismo y modernidad desde el primer momento. El objetivo principal era crear una landing page elegante y minimalista que convierta visitantes en clientes potenciales, mostrando los servicios de la agencia de forma clara y atractiva.';
+        challenges = 'Quería que cuando alguien cambiara de modo claro a oscuro, el logo también cambiara automáticamente de negro a blanco. Suena simple, pero conseguir que se viera fluido y sin errores me tomó varios intentos. Al final logré que funcionara perfecto y ahora parece mágico.';
+        learnings = 'Menos es más. Al limitarme a solo blanco y negro, tuve que ser más creativo con los espacios, tamaños de texto y organización. Aprendí que un diseño simple y bien ejecutado siempre gana contra uno sobrecargado de efectos y colores.';
+        break;
     }
     
     const getFallbackDescription = (featureId: string) => {
@@ -341,16 +380,19 @@ function translateProject(
 
         case 'Catálogo variado': return 'Incluye cómics de distintos personajes de ficción y universos, organizados de manera simple y directa.';
         case 'Factura integrada': return 'El sistema genera una factura básica para completar la experiencia de compra dentro del sitio.';
-        
+
         case 'Menú Organizado': return 'Una presentación clara y visualmente ordenada de los platos principales del restaurante.';
         case 'contentManagement': return 'Facilidad para actualizar contenido sin necesidad de código.';
         case 'Diseño integral': return 'Aplicación de la identidad visual a todos los elementos digitales y físicos del evento.';
         case 'Logo único': return 'Diseño de un distintivo visual memorable y original.';
         case 'Paleta de colores': return 'Selección estratégica de colores para transmitir frescura y salud.';
 
-        
         case 'Cultura Pop': return 'Enfoque en productos de cultura pop con identidad propia.';
         case 'Experiencia': return 'Experiencia práctica en ventas, organización y trato directo con cliente';
+
+        case 'Aspectos de Marca': return 'Esquema de colores blanco/negro, no elementos innecesarios y Espaciado generoso (breathing room)'
+        case 'Contacto': return 'Hacer que validara emails, previniera errores y fuera intuitivo tanto en computadora como en celular fue todo un desafío de usabilidad.'
+
         default: return featureId;
       }
     };
@@ -362,7 +404,7 @@ function translateProject(
       imageAltText: 'Placeholder image',
       categoryText: project.Categoría,
       dateText: project.date,
-      detailedDescription, 
+      detailedDescription,
       keyFeaturesTranslated:
         project.keyFeatures?.map((kf) => ({
           ...kf,
